@@ -16,6 +16,15 @@ namespace EatAndDrink.Models
         // Вместо <пароль> указываем пароль созданный при установке SQL Server Expres
         private readonly String _connectionString = "Data Source=DESKTOP-CJ6A5P8\\SQLEXPRESS;Initial Catalog=EatAndDrinkDB;Persist Security Info=True;TrustServerCertificate=True;Encrypt=False;User ID = SA;Password=kstu2021;";
         public DbSet<Person> Persons { get; set; }
+        public DbSet<Client> Clients { get; set; }
+        public DbSet<Courier> Couriers { get; set; }
+        public DbSet<Dish> Dishes { get; set; }
+        public DbSet<Menu> Menus { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<Restorant> Restorants { get; set; }
+
+
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder options) => options.UseSqlServer(_connectionString);
     }
